@@ -70,7 +70,7 @@ bias = {
 #Define model
 pred = model(X, weights, bias)
 
-#Define loss and optimizer
+#Define loss and optimizer在这里定义了损失函数
 cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=pred, labels=Y))
 optimizer = tf.train.AdamOptimizer(learning_rate).minimize(cost)
 
