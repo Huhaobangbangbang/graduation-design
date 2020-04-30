@@ -37,8 +37,8 @@ def model(x, weights, bias):
 	return output_layer
 
 #Training and Testing Data
-train_X , train_Y = data_encode('train.csv')
-test_X , test_Y = data_encode('test.csv')
+train_X , train_Y = data_encode('test2.csv')
+test_X , test_Y = data_encode('train2.csv')
 
 
 #hyperparameter
@@ -91,7 +91,7 @@ with tf.Session() as sess:
 	correct_pred = tf.equal(tf.argmax(test_result, 1), tf.argmax(train_Y, 1))
 
 	accuracy = tf.reduce_mean(tf.cast(correct_pred, "float"))
-	print("Accuracy:", accuracy.eval({X: test_X, Y: test_Y}))
+	print("Accuracy:", accuracy.eval({X: test_X, Y: test_Y}))#两个特征融合时这一段代码需舍去
 
 
 end_time = time.time()

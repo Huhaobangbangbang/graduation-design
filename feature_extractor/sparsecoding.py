@@ -35,7 +35,7 @@ S=csr_matrix(list_values)
 #print(S)
 
 B=S.todense()
-#print(B)
+print(B)
 
 
 #
