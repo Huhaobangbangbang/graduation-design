@@ -66,3 +66,16 @@ y=(y_train,y_train,y_train,y_train)
 #k为稀疏系数
 endmatrix=normDataSet1*y
 print('endmatrix')
+
+#以稀疏系数大小进行分类
+#初期以决策树表示，后因效果不好遂删除
+if endmatrix<0.02:
+    print("A")
+
+    if endmatrix<0.2&endmatrix>0.02:
+        print("B")
+    else:
+        print("C")
+
+
+    #初期代码 以提取出来的特征作为特征矩阵

@@ -7,7 +7,7 @@ from sparselandtools.dictionaries import Dictionary
 from sparselandtools.pursuits import Pursuit
 
 logging.basicConfig(level=logging.INFO)
-
+#利用ksvd  字典稀疏表示算法  一种用于稀疏表示的过完备字典设计算法
 
 class KSVD:
 
